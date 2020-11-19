@@ -129,6 +129,17 @@ body {
   width: 100%;
 }
 
+.footer {
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.footer-paragraph {
+  line-height: 25px;
+}
+
 @media screen and (min-width: 1440px) {
   body {
     background: url("../assets/img/bg-pattern-top-desktop.svg") top left
@@ -205,6 +216,10 @@ body {
     padding-top: 1.5em;
     padding-bottom: 2em;
     line-height: 25px;
+    margin: 0;
+  }
+
+  .footer {
     margin: 0;
   }
 }
