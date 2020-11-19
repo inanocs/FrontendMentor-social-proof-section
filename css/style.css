@@ -26,12 +26,12 @@ h4 {
 }
 
 body {
-  background-image: url("../assets/img/bg-pattern-top-mobile.svg"),
-    url("../assets/img/bg-pattern-bottom-mobile.svg");
-  background-size: contain;
-  background-position-x: left;
-  background-position-y: top;
-  background-repeat: no-repeat;
+  background: url("../assets/img/bg-pattern-top-mobile.svg") top left no-repeat,
+    url("../assets/img/bg-pattern-bottom-mobile.svg") bottom right no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   font-size: 15px;
   font-family: "Spartan", sans-serif;
   padding: 0.5em;
@@ -55,6 +55,7 @@ body {
   color: var(--dark-grayish-magenta);
   font-size: 1em;
   font-weight: 500;
+  padding: 1em;
 }
 
 .header-right {
@@ -89,7 +90,7 @@ body {
 
 .cards {
   display: grid;
-  margin-top: 2.2em;
+  margin: 2.2em 0;
 }
 
 .card {
@@ -104,6 +105,7 @@ body {
 .card-header {
   align-items: center;
   display: flex;
+  margin-top: 1em;
 }
 .card-image {
   margin: 0;
@@ -124,4 +126,91 @@ body {
   line-height: 25px;
   margin: 0;
   margin-top: 1.5em;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background: url("../assets/img/bg-pattern-top-desktop.svg") top left
+        no-repeat,
+      url("../assets/img/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+    padding: 9em;
+    justify-content: space-evenly;
+  }
+  .header {
+    align-items: center;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-left__h1 {
+    margin: 0;
+    font-size: 3.5em;
+  }
+
+  .header-left__h2 {
+    font-size: 1.1em;
+    line-height: 2em;
+    padding: 0;
+    width: 90%;
+  }
+
+  .header-right {
+    position: relative;
+  }
+  .rating-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1.5em;
+    position: relative;
+    width: 70%;
+  }
+
+  .rating-container:first-child {
+    left: 10%;
+  }
+
+  .rating-container:nth-child(2) {
+    left: 20%;
+  }
+
+  .rating-container:last-child {
+    left: 30%;
+  }
+  .rating-paragraph {
+    margin: 0;
+    margin-left: 1.5em;
+  }
+  .rating-img {
+    margin-top: 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .card:nth-child(2) {
+    top: 1em;
+  }
+  .card:last-child {
+    top: 2em;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    line-height: 25px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body {
+    padding-left: 15em;
+    padding-right: 15em;
+  }
 }
