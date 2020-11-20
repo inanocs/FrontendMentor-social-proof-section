@@ -8,6 +8,8 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
+You can watch it [Following this link](https://inanocs-frontendmentor-social-proof-section.vercel.app/)
+
 **To do this challenge, you need a basic understanding of HTML and CSS.**
 
 ## The challenge
